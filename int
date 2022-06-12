@@ -1,0 +1,30 @@
+def num_check(question, error):
+        
+    
+    
+    valid = False
+    while not valid:
+        try:
+            response = int(input(question))
+            
+            #This if line is what the conditions of your number need to be. For me it just needsa to greater then zero so i just make sure that its greater then zero.
+            if 0 < response:
+                return response
+            else:
+                print(error)
+        except ValueError:
+            print(error)
+            
+            
+            
+#---------------------- Main Routine ----------------------
+
+#Thius asks the user to inoput a number. If the number is less then zwero it prits an error if number is not a interger it prints a error.
+
+var_num = num_check("What would you like the number to be? ","That is not a valid input\nValid Inputs are a whole number greater then 0")
+
+
+print(var_num)
+print("That is your number")
+            
+            
